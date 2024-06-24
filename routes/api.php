@@ -9,3 +9,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/webhook', [MessengerController::class, 'webhook']);
+
+Route::get('/webhook', [MessengerController::class, 'webhook']);
