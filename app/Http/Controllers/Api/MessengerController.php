@@ -15,7 +15,7 @@ class MessengerController extends Controller
         $mode = $request->input('hub_mode');
 
         if ($mode && $verifyToken) {
-            if ($mode === 'subscribe' && $verifyToken === env('PAGE_ACCESS-TOKEN')) {
+            if ($mode === 'subscribe' && $verifyToken === env('PAGE_ACCESS_TOKEN')) {
                 return response($challenge, 200);
             } else {
                 return response('Forbidden', 403);
