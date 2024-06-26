@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use pimax\FbBotApp;
 use pimax\Messages\message;
+use Illuminate\Support\Facades\Log;
 
 class MessengerController extends Controller
 {
