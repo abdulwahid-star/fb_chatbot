@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Log;
 class MessengerController extends Controller
 {
     public function webhook(Request $request) {
+        response()->json([
+            'message' => $request->all()
+        ]);
+
         $data = $request->all();
 
         if ($data['object'] === 'page') {
