@@ -14,9 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->append(VerifyBot::class);
-        $middleware->validateCsrfTokens(except: [
-            'https://fbchatbot-production.up.railway.app/webhook' // <-- exclude this route
-        ]);
+        // $middleware->validateCsrfTokens(except: [
+        //     'https://fbchatbot-production.up.railway.app/webhook' // <-- exclude this route
+        // ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
