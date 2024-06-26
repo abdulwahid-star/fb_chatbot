@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Log;
 class MessengerController extends Controller
 {
     public function webhook(Request $request) {
-        Log::info('Webhook request received', ['request' => $request->all()]);
+        Log::info('Webhook requests received', ['request' => $request->all()]);
 
         $challenge = $request->input('hub_challenge');
         $verifyToken = $request->input('hub_verify_token');
